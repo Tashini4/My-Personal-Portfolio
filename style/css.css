@@ -250,6 +250,64 @@ body{
     margin-bottom: 1.5rem;
 }
 
+/*=========================project section=============================*/
+.main-text{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #06C3DD;
+}
+.main-text h2{
+    font-weight: 700;
+    font-size: 40px;
+}
+.main-text span{
+    color: white;
+    font-size: .8rem;
+    font-weight:200 ;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
+}
+.section-project .project-box{
+    flex: 1 1 18rem;
+    padding: 2rem 1rem 2rem;
+    width: 200px;
+    height: 400px;
+    text-align: center;
+    margin: 0 5%;
+    background: black;
+    border: 30px ;
+    transition: transform .4s;
+    border-radius: 10px;
+}
+.section-project .project-box:hover{
+    box-shadow:0 0 25px #06C3DD,
+    0 0 50px #06C3DD;
+}
+.btn{
+    width: auto;
+    justify-content: center;
+    margin-top:10px;
+}
+.project-box:hover{
+    transform: translateY(-.7rem);
+}
+.project-box h2{
+    margin-top: 10px;
+    color: #06C3DD;
+}
+.project-box p{
+    color:white;
+    margin: 5px 3rem;
+}
+
 
 
 
