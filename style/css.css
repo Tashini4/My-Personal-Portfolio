@@ -308,6 +308,66 @@ body{
     margin: 5px 3rem;
 }
 
+/*====================assignment section====================*/
+.assignment h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 250px;
+    color: #06C3DD;
+}
+.assignment-content {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    grid-gap: 2rem;
+
+}
+.assignment-content div{
+    border: 2px solid #06C3DD;
+    background: linear-gradient(white,#06C3DD);
+    border-radius: 30px 30px 30px 30px;
+    width: 200px;
+    height: 200px;
+    margin-left:50px;
+    transition: transform .4s;
+}
+.assignment-content div:hover{
+    transform: translateY(-.7rem);
+}
+.assignment-content div img{
+    width: 80px;
+    height: 80px;
+    margin-left:50px;
+    padding: 10px;
+}
+.assignment-content div h3{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding: 20px 40px;
+}
+.assignment-content div a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: .5s ease;
+}
+.assignment-content div a:hover{
+    box-shadow: none;
+    color: black;
+}
 
 
 
