@@ -483,6 +483,30 @@ body{
 .contact form textarea{
     resize: none;
 }
+/*====================footer section====================*/
+footer{
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+footer p{
+    color: white;
+}
+footer a{
+    display: inline-flex;
+    justify-content: center;
+    color: white;
+    background:#06C3DD ;
+    padding: .6rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+footer a i{
+    font-size: 1rem;
+    color:#01011f;
+}
 
 
 
