@@ -212,6 +212,45 @@ body{
     text-align: center;
 }
 
+/*=========================about section=============================*/
+.about {
+    /* min-height: 100vh;
+     min-width: 100%;
+     background: url("../assests/images/about/bac.png") no-repeat;
+     background-size: cover;
+     background-position: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+    grid-gap: 2em;
+
+}
+
+.about .img-about{
+    text-align: center;
+    position: relative;
+}
+.about .img-about img{
+    width: 400px;
+    height: auto;
+}
+.about-content span{
+    color: #06C3DD;
+    font-size: 50px;
+}
+.about-content h2{
+    color: white;
+    font-size: 48px;
+    margin-bottom:2.5rem;
+}
+.about-content p{
+    color: white;
+    font-weight:300 ;
+    margin-bottom: 1.5rem;
+}
+
+
 
 
 
