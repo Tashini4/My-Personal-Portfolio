@@ -422,6 +422,27 @@ body{
     margin: 70px 10px;
 }
 
+/*====================gallery section====================*/
+.gallery h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+    color: #06C3DD;
+}
+.gallery-content  {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    grid-gap: 8rem;
+
+}
+.gallery-content div img{
+    width:300px;
+    height: 250px;
+
+}
 
 
 
