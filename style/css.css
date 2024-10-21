@@ -1,141 +1,88 @@
 *{
-    margin: 0;
+    margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins" , sans-serif;
+    font-family: sans-serif;
 }
-/*=========================header section=============================*/
+:root{
+    --main-color:#01011f;
+    --second-color :white;
+    --third-color:#06C3DD
+}
 body{
-   min-height: 100vh;
-    background: url("../assests/images/index/background1.png") no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color:var(--main-color);
+    font-size: 16px;
+    font-weight: normal;
     overflow-x: hidden;
 }
+/*============navbar section===========*/
 .header{
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
     width: 100%;
-    padding: .5rem 3%;
+    height: 80px;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    padding: 30px;
 }
-.header::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    backdrop-filter: blur(50px);
-    z-index: -1;
+#menu-icon{
+    font-size: 20px;
+    color: white;
+    display: none;
 }
-.header::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background:linear-gradient(90deg,transparent,#06C3DD,transparent) ;
-    transition: .5s;
+.header img{
+    width: 150px;
+    height: 60px;
+    transition: 0.5s ease-in-out;
 }
-.header:hover::after{
-    left: 100%;
-}
-
 .navbar a{
-    font-size: 1rem;
-    color: white;
+    color: var(--second-color);
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 1rem;
+    margin-left: 20px;
 }
-#check{
-    display: none;
+.navbar a:hover{
+    color: #06C3DD;
+    text-shadow: 0 0 25px var(--third-color),
+    0 0 50px var(--third-color);
 }
-.icons{
-    font-size: 2.8rem;
-    right: 5%;
-    color: white;
-    cursor: pointer;
-    display: none;
+.navbar a.active{
+    color: var(--third-color);
 }
-@media (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .header{
-        padding: 1.3rem 5%;
-    }
-}
-@media (max-width: 1024px) {
-    .header{
-        padding: 1.3rem 5%;
-    }
-}
-@media (max-width: 768px) {
-    .icons{
-        display: inline-flex;
-    }
-    #check:checked~.icons #menu-icon{
-        display: none;
-    }
-    .icons #close-icon{
-        display: none;
-    }
-    #check:checked~.icons #close-icon{
-        display: block;
-    }
-    .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: transparent;
-        backdrop-filter: blur(50px);
-        box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
-        transition: .3s ease;
-    }
-    #check:checked~.navbar{
-        height: 25rem;
-    }
-    .navbar a{
-        display: block;
-        font-size: 1.1rem;
-        margin: 1.5rem 0;
-        text-align: center;
-        transform: translateY(-50px);
-        opacity: 0;
-        transition: .3s ease;
-    }
-    #check:checked~.navbar a{
-        transform: translateY(0);
-        opacity: 1;
-        transition-delay: calc(.15s * var(--i));
+        padding: 0 3.5%;
     }
 }
 
-/*=========================header section=============================*/
+/*============home section===========*/
 .home{
-    padding: 100px 10%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    grid-gap: 4em;
+    padding: 100px 10%;
+    gap: 4rem;
+    overflow-x: hidden;
+
 }
 .home-content{
-    max-width: 600px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
 }
 .home-content h1{
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: white;
+    font-size: 50px;
+    color:var(--second-color) ;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
 }
 .change-text{
-    font-size: 1.3rem;
+    font-size: 30px;
     font-weight: 600;
     color: white;
 }
@@ -148,7 +95,7 @@ body{
     position: absolute;
     display: flex;
     opacity: 0;
-    color: #06C3DD;
+    color: var(--third-color);
 }
 .change-text h3 .word .letter{
     transform-origin: center center 25px;
@@ -170,24 +117,24 @@ body{
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #06C3DD;
+    border: 2px solid var(--third-color);
     border-radius: 50%;
     font-size: 20px;
-    color: #06C3DD;
+    color: var(--third-color);
     text-decoration: none;
     margin: 20px 15px 30px 0;
     transition: .5s ease;
 }
 .social-icons a:hover{
-    background: #06C3DD;
+    background: var(--third-color);
     color: white;
 }
 .btn{
     display: inline-block;
     padding: 12px 28px;
-    background: #06C3DD;
+    background: var(--third-color);
     border-radius: 10px;
-    box-shadow: 0 0 10px #06C3DD;
+    box-shadow: 0 0 10px var(--third-color);
     font-size: 16px;
     color: white;
     letter-spacing: 1px;
@@ -196,29 +143,23 @@ body{
     transition: .5s ease;
 }
 .btn:hover{
-    box-shadow: #06C3DD;
+    box-shadow: var(--third-color);
 }
-/*.line{
-    border-right: 6px solid white;
-    height: 200px;
-    position: absolute;
-    left: 0;
-    margin-left: 100px;
-    bottom: 150px;
+.home-img img{
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+}
 
-}*/
-.home-img{
-    position: relative;
-    text-align: center;
-}
+
 
 /*=========================about section=============================*/
-.about {
-    /* min-height: 100vh;
+/*.about {
+    !* min-height: 100vh;
      min-width: 100%;
      background: url("../assests/images/about/bac.png") no-repeat;
      background-size: cover;
-     background-position: center;*/
+     background-position: center;*!
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,7 +191,7 @@ body{
     margin-bottom: 1.5rem;
 }
 
-/*=========================project section=============================*/
+!*=========================project section=============================*!
 .main-text{
     width: 100%;
     text-align: center;
@@ -308,7 +249,7 @@ body{
     margin: 5px 3rem;
 }
 
-/*====================assignment section====================*/
+!*====================assignment section====================*!
 .assignment h1{
     width: 100%;
     text-align: center;
@@ -369,7 +310,7 @@ body{
     color: black;
 }
 
-/*====================experience section====================*/
+!*====================experience section====================*!
 .experience h1{
     width: 100%;
     text-align: center;
@@ -422,7 +363,7 @@ body{
     margin: 70px 10px;
 }
 
-/*====================gallery section====================*/
+!*====================gallery section====================*!
 .gallery h1{
     width: 100%;
     text-align: center;
@@ -444,7 +385,7 @@ body{
 
 }
 
-/*====================contact section====================*/
+!*====================contact section====================*!
 .contact .main-text{
     width: 100%;
     text-align: center;
@@ -483,7 +424,7 @@ body{
 .contact form textarea{
     resize: none;
 }
-/*====================footer section====================*/
+!*====================footer section====================*!
 footer{
     padding: 1.5rem 10%;
     display: flex;
@@ -506,7 +447,7 @@ footer a{
 footer a i{
     font-size: 1rem;
     color:#01011f;
-}
+}*/
 
 
 
