@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>case-02</title>
+</head>
+<body>
+<h2 class="heading">JavScript Queue</h2>
+
+<div class="container">
+    <div class="card">
+        <div class="div first">
+            <div class="color c1"></div>
+        </div>
+        <div class="div middle">
+            <div class="color c2"></div>
+            <div class="color c3"></div>
+            <div class="color c4"></div>
+            <div class="color c5"></div>
+        </div>
+        <div class="div last">
+            <div class="color c6"></div>
+        </div>
+        <div class="btn">
+            <button id="start">Start</button>
+            <button id="end">End</button>
+        </div>
+    </div>
+</div>
+
+<!--JQuery-->
+<script src="../../../assests/lib/jquery-3.7.1.min.js"></script>
+<script>
+    let interval;
+
+    $("#start").click(function () {
+        let arr1 = ["red", "green", "blue", "yellow", "purple", "hotpink"];
+
+        if (interval) {
+            clearInterval(interval);
+        }
+        interval = setInterval(() => {
+            let last = arr1.pop();
+            arr1.unshift(last);
+
+            $(".color").eq(0).css("background-color", arr1[0]);
+            $(".color").eq(1).css("background-color", arr1[1]);
+            $(".color").eq(2).css("background-color", arr1[2]);
+            $(".color").eq(3).css("background-color", arr1[3]);
+            $(".color").eq(4).css("background-color", arr1[4]);
+            $(".color").eq(5).css("background-color", arr1[5]);
+        }, 2000);
+    });
+
+    $("#end").click(function () {
+        clearInterval(interval);
+    });
+</script>
+</body>
+</html>

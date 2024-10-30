@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.kiit section:first-child{
+    border: 2px solid red;
+    width: 900px;
+    height: 200px;
+    position: relative;
+    margin: 0 200px;
+    bottom: 100px;
+}
+#light-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    gap: 2rem;
+
+}
+#light-panel .light{
+    width: 100px;
+    height: 60px;
+    border: 1px solid black;
+}
+.button-panel{
+    margin-left: 550px;
+    padding: 20px;
+}
+.button-panel button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    margin-bottom: 500px;
+    transition: .5s ease;
+}
+.button-panel:hover{
+    box-shadow: none;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>case-01</title>
+</head>
+<body>
+<h2 class="heading">Js Que</h2>
+
+<div class="case-container">
+    <div class="js-content">
+        <div>
+            <img src="../man.gif" alt="">
+            <h1>A</h1>
+        </div>
+        <div>
+            <img src="../man.gif" alt="">
+            <h1>B</h1>
+        </div>
+        <div>
+            <img src="../man.gif" alt="">
+            <h1>C</h1>
+        </div>
+        <div>
+            <img src="../man.gif" alt="">
+            <h1>D</h1>
+        </div>
+        <div>
+            <img src="../man.gif" alt="">
+            <h1>E</h1>
+        </div>
+        <div>
+            <img src="../man.gif" alt="">
+            <h1>F</h1>
+        </div>
+    </div>
+    <div class="button">
+        <button id="s-btn">Start</button>
+        <button id="e-btn">End</button>
+    </div>
+</div>
+<!--JQuery-->
+<script src="../../../assests/lib/jquery-3.7.1.min.js"></script>
+<script>
+    let intervalId;
+
+    $("#s-btn").click(function () {
+        let arr = ["A", "B", "C", "D", "E", "F"];
+
+        if (intervalId) {
+            clearInterval(intervalId);
+        }
+        intervalId = setInterval(() => {
+            let last_value = arr.pop();
+            arr.unshift(last_value);
+
+            $("h1")[0].innerText = arr[0];
+            $("h1")[1].innerText = arr[1];
+            $("h1")[2].innerText = arr[2];
+            $("h1")[3].innerText = arr[3];
+            $("h1")[4].innerText = arr[4];
+            $("h1")[5].innerText = arr[5];
+        }, 3000);
+    });
+
+    $("#e-btn").click(function () {
+        clearInterval(intervalId);
+    });
+
+</script>
+</body>
+</html>

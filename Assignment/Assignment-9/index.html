@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style/normalize.css">
+    <title>assignment-9</title>
+</head>
+<body>
+<section class="kiit">
+    <section id="light-panel">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </section>
+
+    <section class="button-panel">
+        <button id="start-btn">Start</button>
+        <button id="end-btn">End</button>
+
+    </section>
+</section>
+<script src="../../assests/lib/jquery-3.7.1.min.js"></script>
+<script>
+    const light_count =6;
+    let current_light = -1;
+    let direction = "RIGHT";
+    let intervalId = null
+    ;
+
+    updateLight = ()=> {
+        if (direction === "RIGHT"){
+            current_light++;
+            $(".light").css("background" , "white");
+            $(".light").eq(current_light).css("background","red");
+            $(".light").eq(current_light-1).css("background","pink");
+
+            if (current_light == light_count-1){
+                direction="LEFT";
+            }
+        }else{
+            current_light--;
+            $(".light").css("background" , "white");
+            $(".light").eq(current_light).css("background","red");
+            $(".light").eq(current_light+1).css("background","pink");
+
+            if (current_light == 0){
+                direction = "RIGHT";
+            }
+        }
+    }
+
+    $('#start-btn').on('click', function (){
+      intervalId = setInterval(updateLight,100);
+
+    })
+    $('#end-btn').on('click', function (){
+            clearInterval(intervalId);
+    })
+
+
+</script>
+</body>
+</html>

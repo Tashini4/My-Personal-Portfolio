@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>inclz Assignment</title>
+    <link rel="stylesheet" href="../assest/Style/normalize.css">
+
+    <style>
+        body>section{
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+        }
+       body>section:first-child{
+           background-color: red;
+       }
+       body>section:first-child>div{
+           background-color: white;
+           width: 150px;
+           height: 150px;
+           border-radius: 50%;
+           position: absolute;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           top: 0;
+           margin: auto;
+       }
+       body>section:first-child>div>div{
+           background-color: red;
+           width: 80px;
+           height: 80px;
+           position: absolute;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           top: 0;
+           margin:auto;
+
+       }
+       body>section:nth-child(2){
+           background-color: green;
+           right: 0;
+       }
+       body>section:nth-child(2)>div{
+           background-color: white;
+           width: 150px;
+           height: 150px;
+           border-radius: 50%;
+           position: absolute;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           top: 0;
+           margin: auto;
+       }
+        body>section:nth-child(2)>div>div{
+            background-color: red;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            margin:auto;
+
+        }
+       body>section:nth-child(3){
+           background-color: goldenrod;
+           bottom: 0;
+       }
+        body>section:nth-child(3)>div{
+            background-color: white;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            margin: auto;
+        }
+        body>section:nth-child(3)>div>div{
+            background-color: red;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            margin:auto;
+
+        }
+
+       body>section:nth-child(4){
+           background-color: hotpink;
+           right: 0;
+           bottom: 0;
+       }
+        body>section:nth-child(4)>div{
+            background-color: white;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            margin: auto;
+        }
+        body>section:nth-child(4)>div>div{
+            background-color: red;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            margin:auto;
+
+        }
+        #middlesquare{
+            background-color: white;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            margin:auto;
+        }
+        #middlesquare>div{
+            background-color: red;
+            width: 80px;
+            height: 80px;
+            border-radius:50% ;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            margin:auto;
+        }
+        .corner{
+            background-color: white;
+            width: 15vw;
+            height: 15vw;
+            position: absolute;
+            border-radius: 100%;
+
+        }
+        #corner1{
+            right:calc(-15vw/2);
+            bottom: calc(-15vw/2);
+            margin: auto;
+        }
+        #corner2{
+            right: 0;
+            left: 0;
+            top: calc(-15vw/2);
+            margin: auto;
+        }
+        #corner3{
+            right: 0;
+            left: 0;
+            bottom: calc(-15vw/2);
+            margin: auto;
+        }
+        #corner4{
+            left: calc(-15vw/2);
+            bottom:  calc(-15vw/2);
+            margin: auto;
+        }
+        #corner5{
+            right: calc(-15vw/2);
+            top:  calc(-15vw/2);
+            margin: auto;
+
+        }
+        #corner6{
+            left: calc(-15vw/2);
+            top:  calc(-15vw/2);
+            margin: auto;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+
+    <div id="middlesquare">
+        <div></div>
+    </div>
+
+    <div id="corner1" class="corner"></div>
+    <div id="corner2" class="corner"></div>
+    <div id="corner3" class="corner"></div>
+    <div id="corner4" class="corner"></div>
+    <div id="corner5" class="corner"></div>
+    <div id="corner6" class="corner"></div>
+
+</body>
+</html>

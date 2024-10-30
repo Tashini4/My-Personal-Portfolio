@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case-5</title>
+   <!-- <link rel="stylesheet" href="assest/style/normalize.css">-->
+
+    <style>
+        body>section{
+            width: 1000px;
+            height: 500px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        div{
+            border: 1px solid black;
+        }
+        section>div:first-child{
+            background: red;
+            grid-column: 1/2;
+        }
+        section>div:nth-child(2){
+            background: forestgreen;
+            grid-column: 2/3;
+        }
+        section>div:nth-child(3){
+            background: orangered;
+            grid-column: 3/4;
+        }
+        section>div:nth-child(4){
+            background: purple;
+            grid-column: 4/5;
+        }
+        section>div:nth-child(5){
+            background: hotpink;
+            grid-row: 2/3;
+        }
+        section>div:nth-child(6){
+            background: blue;
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        section>div:nth-child(7){
+            background: brown;
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+        section>div:nth-child(8){
+            background: plum;
+            grid-column: 4/5;
+            grid-row: 2/3;
+        }
+        section>div:nth-child(9){
+            background: darkmagenta;
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        section>div:nth-child(10){
+            background: yellow;
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        section>div:nth-child(11){
+            background: grey;
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }
+        section>div:nth-child(12){
+            background: lightseagreen;
+            grid-column: 4/5;
+            grid-row: 3/4;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+</section>
+
+</body>
+</html>
