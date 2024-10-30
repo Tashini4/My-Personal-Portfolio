@@ -202,3 +202,48 @@ span{
     text-align: center;
     /*margin: 7px 1px;*/
 }
+
+/*===================PROJECT DESIGN CSS================*/
+.project{
+    background: #191f36;
+}
+.project h2{
+    margin-bottom: 5rem;
+}
+.project-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.project-content .project-box{
+    flex: 1 1 30rem ;
+    height: 470px;
+    background: #262840;
+    backdrop-filter: blur(50px);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    line-height: 1.2;
+    border: .2rem solid #262840;
+    transition: .5s ease;
+}
+.project-content .project-box:hover{
+    border-color: #191f36;
+    box-shadow: 0 0 80px rgb(1, 1, 31);
+    transform: scale(1.02);
+}
+
+.project-box h3 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-top: 20px;
+}
+.project-box p{
+    font-size: 2rem;
+    margin-top: 10px;
+}
+.project-box .btn {
+    margin-top: 20px;
+}
