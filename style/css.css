@@ -392,7 +392,7 @@ span{
 
 
 /*BREAKPOINT*/
-@media (max-width: 1440px) {
+@media (min-width:1023px )and (max-width: 1440px) {
     html{
         font-size: 55%;
     }
@@ -400,7 +400,7 @@ span{
         grid-template-columns:repeat(2,1fr);
     }
 }
-@media (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 1024px)  {
     .header{
         padding: 2rem 3%;
     }
@@ -420,14 +420,14 @@ span{
         padding: 2rem 3%;
     }
 }
-@media (max-width: 768px) {
+@media (min-width: 420px) and (max-width: 768px) {
     #menu-icon{
         display: block;
     }
     .navbar {
         position: absolute;
         top: 100%;
-        left:0 ;
+        left:0;
         width: 100%;
         padding: 1rem 3%;
         background-color:#262840 ;
@@ -504,7 +504,7 @@ span{
         grid-template-columns: repeat(2,1fr);
     }
 }
-@media (max-width: 425px) {
+@media (min-width: 370px) and (max-width: 425px) {
     .assignment-content{
         grid-template-columns: 1fr;
     }
@@ -547,7 +547,7 @@ span{
         height: 200px;
     }
 }
-@media (max-width: 375px){
+@media (min-width: 320px) and (max-width: 375px){
     html{
         font-size: 50%;
     }
@@ -579,4 +579,5 @@ span{
     .contact form .input-box input{
         width: 100%;
     }
+
 }
