@@ -287,3 +287,25 @@ span{
     margin:0 10px;
     margin-top: 10px;
 }
+
+/*===================SKILLS DESIGN CSS================*/
+.skills{
+    background: #191f36;
+}
+.skills h2{
+    margin-bottom: 5rem;
+}
+.skills-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+.skills-content .skills-box{
+    flex: 1 1 20rem ;
+    padding: 3rem 2rem 4rem;
+    text-align: center;
+    line-height: 1.2;
+    transition: .5s ease;
+}
