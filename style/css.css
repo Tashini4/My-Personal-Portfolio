@@ -165,44 +165,109 @@ span{
     font-size: 4.5rem;
     color: var(--main-color)
 }
-.education-box{
-    display: flex;
-    height: 20vh;
-    width: 100%;
-    border-radius: 20px 20px 20px 20px;
-    background: #262840;
-    margin-top: 2rem;
-}
-.education-box>div> img{
+.timeline{
     position: relative;
-    width: 90px;
-    height: 90px;
-    margin: 1.5vw;
+    max-width: 1200px;
+    margin: 100px auto;
 }
-.edu-text{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 2px ;
-    gap:1.5rem;
+.container{
+    padding: 10px 50px ;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
 }
-.edu-text h3{
-    font-size: 3rem;
-    text-align: right;
+@keyframes movedown {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.container:nth-child(1){
+    animation-delay: 0s;
+}
+.container:nth-child(2){
+    animation-delay: 1s;
+}
+.container:nth-child(3){
+    animation-delay: 2s;
+}
+.text-box{
+    padding: 20px 30px;
+    background:#262840;
+    color: var(--text-color);
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.left-container{
+    left: 0;
+}
+.right-container{
+    left: 50%;
+}
+.container img{
+    position: absolute;
+    width: 70px;
+    border-radius: 50%;
+    right: -35px;
+    top: 32px;
+    z-index: 10;
+}
+.right-container img{
+    left: -35px;
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background:var(--main-color);
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline  {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.text-box h2{
+    font-weight: 600;
     color: var(--main-color);
-
-    /*margin: 7px 10px;*/
 }
-.edu-text p{
-    /*background: red;*/
-    position: relative;
-    bottom: 2vw;
-    font-size: 2rem;
-    text-align: center;
-    /*margin: 7px 1px;*/
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #262840;
+    right: -15px;
 }
-
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #262840;
+    left: -15px;
+}
 /*===================PROJECT DESIGN CSS================*/
 .project{
     background: #191f36;
@@ -392,7 +457,7 @@ span{
 
 
 /*BREAKPOINT*/
-@media (min-width:1023px )and (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
     html{
         font-size: 55%;
     }
@@ -400,7 +465,7 @@ span{
         grid-template-columns:repeat(2,1fr);
     }
 }
-@media (min-width: 767px) and (max-width: 1024px)  {
+@media screen and (max-width: 1024px)  {
     .header{
         padding: 2rem 3%;
     }
@@ -420,7 +485,7 @@ span{
         padding: 2rem 3%;
     }
 }
-@media (min-width: 420px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #menu-icon{
         display: block;
     }
@@ -428,7 +493,7 @@ span{
         position: absolute;
         top: 100%;
         left:0;
-        width: 100%;
+        width: 90%;
         padding: 1rem 3%;
         background-color:#262840 ;
         border-top: .1rem solid rgba(0,0,0,.2);
@@ -470,32 +535,30 @@ span{
         width: 50vw;
         margin-bottom: 3rem;
     }
-    .education-box{
-        width:100%;
-        height: 20vh;
+    .timeline{
+        margin: 50px auto;
     }
-    .education-box>div>img{
-        width: 70px;
-        height: 70px;
-        margin-top: 50px;
+    .timeline::after{
+        left: 31px;
     }
-    .edu-text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 1px ;
-
+    .container{
+        width: 100%;
+        padding-left:80px ;
+        padding-right:25px ;
     }
-    .edu-text>h3{
-        font-size: 2.5rem;
-        text-align: center;
-        margin-top: 50px;
+    .text-box{
+        font-size:13px ;
     }
-    .edu-text>p{
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 20px;
+    .right-container{
+        left: 0;
+    }
+    .left-container img, .right-container img{
+        left: 5px;
+    }
+    .left-container-arrow, .right-container-arrow{
+        border-right: 15px solid #262840;
+        border-left: 0;
+        left: -15px;
     }
     .project h2{
         margin-bottom: 3rem;
@@ -504,7 +567,7 @@ span{
         grid-template-columns: repeat(2,1fr);
     }
 }
-@media (min-width: 370px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
     .assignment-content{
         grid-template-columns: 1fr;
     }
@@ -540,14 +603,13 @@ span{
     .edu-text>p{
         font-size: 1.5rem;
         text-align: center;
-
     }
     .gallery-box img{
         width: 300px;
         height: 200px;
     }
 }
-@media (min-width: 320px) and (max-width: 375px){
+@media screen and (max-width: 375px){
     html{
         font-size: 50%;
     }
