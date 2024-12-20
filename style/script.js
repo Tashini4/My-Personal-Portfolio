@@ -43,17 +43,4 @@ const typed = new Typed('.multiple-text',{
     loop:true,
 });
 
-/*========================contact form===========================*/
-function sendEmail(){
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "tashiniwijethunga@gmail.com",
-        Password : "Pa$$word@2002",
-        To : 'tashiniwijethunga@gmail.com',
-        From : document.getElementById("email").value,
-        Subject :"New Contact Form Enquiry",
-        Body : "And this is the body"
-    }).then(
-        message => alert(message)
-    );
-}
+
