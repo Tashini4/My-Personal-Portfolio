@@ -23,8 +23,7 @@
         <!--logo-->
     <img src="assests/images/index/logo1.png" class="logo" alt="">
 
-   <!-- menu icon-->
-    <i class="fa-solid fa-bars" id="menu-icon"></i>
+
 
   `<!--nav bar-->
     <nav class="navbar">
@@ -37,6 +36,8 @@
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </nav>
+    <!-- menu icon-->
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
 </header>
 
 <!--===================HOME SECTION DESIGN ==================-->
@@ -305,17 +306,19 @@
 <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me</span></h2>
 
-    <form action="#">
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="dda06729-2fdc-4fc1-b9cf-26df62478dde">
         <div class="input-box">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
+            <input type="text" name="firstName" placeholder="First Name">
+            <input type="text" name="lastName" placeholder="Last Name">
         </div>
         <div class="input-box">
-            <input type="number" placeholder="Mobile Number">
-            <input type="email" placeholder="Email Address">
+            <input type="number" name="phone"  placeholder="Mobile Number">
+            <input type="email"  name="email" placeholder="Email Address">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
         </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
+        <button type="submit">Submit</button>
+<!--        <input type="submit" value="Send Message" class="btn">-->
     </form>
 </section>
 
@@ -333,6 +336,7 @@
 <!--typed js-->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
     AOS.init();
 </script>

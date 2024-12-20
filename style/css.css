@@ -421,9 +421,21 @@ span{
 .contact form textarea{
     resize: none;
 }
-.contact form .btn{
-    margin-top: 2rem;
-    cursor: pointer;
+.contact form>button{
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 25px;
+    font-size: 1.55rem;
+    font-weight: bold;
+    background-color:  var(--main-color);
+    border: none;
+    box-shadow: 0 0 5px  var(--main-color), 0 0 25px  var(--main-color);
+}
+.contact form>button:hover{
+    box-shadow: 0 0 5px var(--main-color),
+    0 0 25px var(--main-color),
+    0 0 50px var(--main-color);
 }
 
 /*===================FOOTER DESIGN CSS================*/
